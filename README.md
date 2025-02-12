@@ -1,6 +1,6 @@
+<img src="favicon/Maison_des_ligues_transparent-.webp" alt="Logo du Projet" width="200" height="200">
 
-
-# ![Logo du Projet](favicon/Maison_des_ligues_transparent-.webp) Projet Maison des Ligues
+# Projet Maison des Ligues
 
 Ce projet consiste à développer une plateforme intranet pour une entreprise en pleine expansion. L'objectif est de faciliter les relations entre les collaborateurs.
 
