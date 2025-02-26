@@ -1,6 +1,6 @@
 <div style="display: flex; align-items: center;">
   <h1 style="margin: 0;">Projet Maison des Ligues</h1>
-  <img src="favicon/Maison_des_ligues_transparent-.webp" alt="Logo du Projet" width="50" height="50" style="margin-left: 10px;">
+  <img src="favicon/Maison_des_ligues_transparent-.webp" alt="Logo du Projet" width="100" height="90" style="margin-left: 10px;">
 </div>
 
 ---
