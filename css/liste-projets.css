@@ -24,6 +24,8 @@ h1 {
 
 input[type="text"],
 input[type="password"],
+input[type="file"],
+
 input[type="date"] {
     width: calc(100% - 22px);
     padding: 10px;
@@ -54,7 +56,29 @@ a {
 }
 
 
+.form-groupi {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.form-groupi label {
+    margin-right: 10px;
+    width: 200px; 
+}
+
+.form-groupi input {
+    padding: 8px;
+}
+
+.containeri {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
 
 
 

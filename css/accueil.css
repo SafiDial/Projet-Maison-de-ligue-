@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display:swap');
+
+:root {
+    --primary-color: #6C5CE7;
+    --secondary-color: #FF7675;
+    --background-color: #F5F6FA;
+    --header-bg-color: #FFFFFF;
+    --text-color: #2D3436;
+    --box-shadow-color: rgba(108, 92, 231, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--header-bg-color);
+    padding: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.2rem 1rem var(--box-shadow-color);
+}
+
+
+.logo img {
+    height: 150px;
+    width: auto;
+    max-height: 100%;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem; 
+    margin-right: 1rem; 
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.875rem;
+    height: 1.3125rem;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 0.1875rem;
+    background-color: var(--text-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.active .line:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    max-width: 75rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logout-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; 
+}
+
+.logout-button:hover {
+    background-color: #5A49D6;
+}
+
+.logo {
+    margin-right: auto; 
+}
+
+
+@media (max-width: 48rem) {
+    .nav-links {
+        position: fixed;
+        top: 3.75rem;
+        right: -100%;
+        flex-direction: column;
+        background-color: var(--header-bg-color);
+        width: 12.5rem;
+        padding: 1.25rem;
+        border-radius: 0.3125rem;
+        box-shadow: 0 0.2rem 1rem var(--box-shadow-color);
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 1.25rem;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/*************************** Acceuil *****************************/
+
+.accueil-section {
+    height: 200px;
+    margin-top: 80px;
+    border: 1px solid #8B4513; 
+    background: rgb(255, 255, 255);  
+    text-align: center;
+    color: #4A235A; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.accueil-content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.accueil-content p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #5E2A8C;
+    max-width: 600px;
+}
+
+
+/***************************  WELCOME BONJOUR *****************************/
+
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    padding-left: 40px; 
+    padding-right: 40px;
+}
+
+.user-info {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-grow: 1;
+    border: 2px solid #7D3C98;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(125, 60, 152, 0.4);
+    padding: 15px;
+}
+
+.user-image {
+    flex-shrink: 0;
+}
+
+.user-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7D3C98;
+    box-shadow: 0 4px 12px rgba(125, 60, 152, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-image img:hover {
+    transform: scale(1.1);
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.user-details p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4A235A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.user-greeting {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #7D3C98;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.user-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.user-actions button {
+    background: transparent;
+    color: #7D3C98;
+    border: 2px solid #7D3C98;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-actions .say-hello {
+    background: #7D3C98;
+    color: white;
+    border: none;
+}
+
+.user-actions .say-hello:hover {
+    background: #5E2A8C;
+    box-shadow: 0 0 12px rgba(125, 60, 152, 0.6);
+}
+
+.user-actions button:hover {
+    color: white;
+    background: #7D3C98;
+    box-shadow: 0 0 12px rgba(125, 60, 152, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-section {
+        padding: 20px; 
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .user-info {
+        flex-direction: column; 
+        gap: 15px;
+        align-items: center;
+        padding: 20px; 
+    }
+
+    .user-image img {
+        width: 100px; 
+        height: 100px; 
+    }
+
+    .user-details p {
+        font-size: 16px;
+    }
+
+    .user-greeting {
+        font-size: 24px; 
+    }
+
+    .user-actions {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .user-actions button {
+        padding: 8px 18px;
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .user-info {
+        gap: 10px; 
+        padding: 15px;
+    }
+
+    .user-image img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .user-details p {
+        font-size: 14px; 
+    }
+
+    .user-greeting {
+        font-size: 20px; 
+    }
+
+    .user-actions button {
+        padding: 6px 14px;
+        font-size: 12px; 
+    }
+}
+
+
+
+
+ 
+/*=========================== STYLE FOOTER GLOBAL ===========================*/
+
+.custom-footer {
+    --text-color: #2D3436; 
+    --background-color: #FFFFFF; 
+    --divider-color: #ccc; 
+    --final-text-color: #2D3436; 
+}
+.custom-footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1.25rem 0.9375rem;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  border-top: 0.0625rem solid var(--divider-color);
+  margin-top: auto;
+}
+
+.custom-footer .footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+
+.custom-footer .contact-item {
+  font-size: 0.875rem;
+  color: var(--text-color);
+}
+
+.custom-footer .footer-final {
+  margin-top: 0.9375rem;
+  font-size: 0.75rem;
+  color: var(--final-text-color);
+}
+
+@media (max-width: 48rem) {
+  .custom-footer .footer-contact {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .custom-footer .contact-item {
+    font-size: 0.75rem;
+  }
+}
