@@ -21,6 +21,7 @@ Ce projet consiste à développer une plateforme intranet pour une entreprise en
 - **Liste des collaborateurs avec filtres** : Trouvez facilement vos collègues grâce à des filtres pratiques.
 - **Modification des informations personnelles** : Mettez à jour vos informations en toute simplicité.
 - **Gestion des administrateurs** : Ajoutez, modifiez ou supprimez des collaborateurs en quelques clics.
+
 - [**Cliquez ici pour visiter la page statique** 👌](https://safidial.github.io/Projet-Maison-de-ligue-/)
 
 
