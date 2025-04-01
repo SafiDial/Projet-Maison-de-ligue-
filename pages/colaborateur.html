@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collaborateurs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/colaborateur.css">
+    <style>
+        
+       
+    </style>
 </head>
 <body>
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="images/logo.webp" alt="Logo">
+                <img src="../css/images/logo.webp" alt="Logo">
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="../pages/acceuil.html">Accueil</a></li>
                     <li><a href="#collaborateurs">Collaborateurs</a></li>
                     <li><a href="#profil">Profil</a></li>
                 </ul>
             </nav>
             <div class="user-profile">
-                <img src="uploads/admin.webp" alt="Photo de profil">
+                <img src="../uploads/admin.webp" alt="Photo de profil">
                 <button class="logout-button">Déconnexion</button>
             </div>
             <div class="burger">
@@ -34,21 +39,49 @@
     <main class="collaborateurs-container">
         <h1>Tous les Collaborateurs</h1>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Rechercher par Nom...">
-            <select>
-                <option value="">Catégorie : -Aucun-</option>
-                </select>
+        <div class="search-filter">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Rechercher un collaborateur..." onkeyup="filterCollaborateurs()">
+            </div>
+            
+            <div class="filter-options">
+                <div class="filter-group">
+                    <i class="fas fa-briefcase"></i>
+                    <select id="serviceFilter" onchange="filterCollaborateurs()">
+                        <option value="">Tous les services</option>
+                        <option value="Informatique">Informatique</option>
+                        <option value="RH">RH</option>
+                        <option value="Vente">Vente</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Support">Support</option>
+                        <option value="Logistique">Logistique</option>
+                        <option value="Achats">Achats</option>
+                        <option value="Qualité">Qualité</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select id="villeFilter" onchange="filterCollaborateurs()">
+                        <option value="">Toutes les villes</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Lyon">Lyon</option>
+                        <option value="Marseille">Marseille</option>
+                        <option value="Bordeaux">Bordeaux</option>
+                        <option value="Lille">Lille</option>
+                        <option value="Toulouse">Toulouse</option>
+                        <option value="Nantes">Nantes</option>
+                        <option value="Strasbourg">Strasbourg</option>
+                        <option value="Nice">Nice</option>
+                    </select>
+                </div>
+            </div>
         </div>
+        
 
-        <div class="filter-bar">
-            <input type="text" placeholder="Nom">
-            <input type="text" placeholder="Service">
-            <input type="text" placeholder="Ville">
-            <input type="text" placeholder="Pays">
-        </div>
-
-        <div class="collaborateurs-grid">
+        <div class="collaborateurs-grid" id="collaborateursGrid">
             <div class="collaborateur">
                 <img src="../uploads/fill1 (1).jpg" alt="Jean Dupont" class="collaborateur-image">
                 <div class="collaborateur-info">
@@ -63,7 +96,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/marie_curie.jpg" alt="Marie Curie" class="collaborateur-image">
+                <img src="../uploads/gars1.jpg" alt="Marie Curie" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Marie Curie</p>
                     <p>Service: RH</p>
@@ -76,7 +109,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/pierre_paul.jpg" alt="Pierre Paul" class="collaborateur-image">
+                <img src="../uploads/Gars2.png" alt="Pierre Paul" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Pierre Paul</p>
                     <p>Service: Vente</p>
@@ -89,7 +122,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/sophie_martin.jpg" alt="Sophie Martin" class="collaborateur-image">
+                <img src="../uploads/gars3.jpg" alt="Sophie Martin" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Sophie Martin</p>
                     <p>Service: Marketing</p>
@@ -102,7 +135,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/luc_durand.jpg" alt="Luc Durand" class="collaborateur-image">
+                <img src="../uploads/Fille2.jpg" alt="Luc Durand" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Luc Durand</p>
                     <p>Service: Finance</p>
@@ -115,7 +148,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/isabelle_garcia.jpg" alt="Isabelle Garcia" class="collaborateur-image">
+                <img src="../uploads/Fille2.jpg" alt="Isabelle Garcia" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Isabelle Garcia</p>
                     <p>Service: Support</p>
@@ -128,7 +161,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/thomas_dubois.jpg" alt="Thomas Dubois" class="collaborateur-image">
+                <img src="../uploads/fill1 (1).jpg" alt="Thomas Dubois" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Thomas Dubois</p>
                     <p>Service: Logistique</p>
@@ -141,7 +174,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/claire_bernard.jpg" alt="Claire Bernard" class="collaborateur-image">
+                <img src="../uploads/gars1.jpg" alt="Claire Bernard" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Claire Bernard</p>
                     <p>Service: Achats</p>
@@ -154,7 +187,7 @@
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="uploads/antoine_leroy.jpg" alt="Antoine Leroy" class="collaborateur-image">
+                <img src="../uploads/gars1.jpg" alt="Antoine Leroy" class="collaborateur-image">
                 <div class="collaborateur-info">
                     <p>Nom: Antoine Leroy</p>
                     <p>Service: Qualité</p>
@@ -169,13 +202,26 @@
         </div>
     </main>
 
-    <footer>
-        <div class="contact-info">
-            <p>Contact : +33 XX XX XX</p>
-            <p>Mail : Intranet@gmail.com</p>
-        </div>
-    </footer>
+  
+ <!--********************* FOOTER ******************** -->
 
-    <script src="script.js"></script>
+ <footer class="custom-footer">
+    <div class="footer-contact">
+        <div class="contact-item">
+            <span>+33 7 67 11 60 24</span>
+        </div>
+        <div class="contact-item">
+            <span>ITIC PARIS 75020</span>
+        </div>
+        <div class="contact-item">
+            <span>diallosafia75@gmail.com</span>
+        </div>
+    </div>
+    <div class="footer-final">
+        <p>&copy; Safiatou DIALLO. Tous droits réservés.</p>
+    </div>
+</footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
