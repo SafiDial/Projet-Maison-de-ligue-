@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/colaborateur.css">
 </head>
+
 <body>
     <header>
         <div class="navbar">
@@ -37,9 +39,10 @@
         <div class="search-filter">
             <div class="search-box">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Rechercher un collaborateur..." onkeyup="filterCollaborateurs()">
+                <input type="text" id="searchInput" placeholder="Rechercher un collaborateur..."
+                    onkeyup="filterCollaborateurs()">
             </div>
-            
+
             <div class="filter-options">
                 <div class="filter-group">
                     <i class="fas fa-briefcase"></i>
@@ -56,7 +59,7 @@
                         <option value="Qualité">Qualité</option>
                     </select>
                 </div>
-                
+
                 <div class="filter-group">
                     <i class="fas fa-map-marker-alt"></i>
                     <select id="villeFilter" onchange="filterCollaborateurs()">
@@ -79,10 +82,10 @@
             <div class="collaborateur">
                 <img src="../uploads/fill1 (1).jpg" alt="Jean Dupont" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Jean Dupont</p>
-                    <p>Service: Informatique</p>
-                    <p>Ville: Paris</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Jean Dupont</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Informatique</p>
+                    <p><i class="fas fa-city"></i> Ville: Paris</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Jean Dupont')">Envoyer Bonjour</button>
@@ -91,10 +94,10 @@
             <div class="collaborateur">
                 <img src="../uploads/gars1.jpg" alt="Marie Curie" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Marie Curie</p>
-                    <p>Service: RH</p>
-                    <p>Ville: Lyon</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Marie Curie</p>
+                    <p><i class="fas fa-briefcase"></i> Service: RH</p>
+                    <p><i class="fas fa-city"></i> Ville: Lyon</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Marie Curie')">Envoyer Bonjour</button>
@@ -103,10 +106,10 @@
             <div class="collaborateur">
                 <img src="../uploads/Gars2.png" alt="Pierre Paul" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Pierre Paul</p>
-                    <p>Service: Vente</p>
-                    <p>Ville: Marseille</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Pierre Paul</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Vente</p>
+                    <p><i class="fas fa-city"></i> Ville: Marseille</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Pierre Paul')">Envoyer Bonjour</button>
@@ -115,10 +118,10 @@
             <div class="collaborateur">
                 <img src="../uploads/gars3.jpg" alt="Sophie Martin" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Sophie Martin</p>
-                    <p>Service: Marketing</p>
-                    <p>Ville: Bordeaux</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Sophie Martin</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Marketing</p>
+                    <p><i class="fas fa-city"></i> Ville: Bordeaux</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Sophie Martin')">Envoyer Bonjour</button>
@@ -127,10 +130,10 @@
             <div class="collaborateur">
                 <img src="../uploads/Fille2.jpg" alt="Luc Durand" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Luc Durand</p>
-                    <p>Service: Finance</p>
-                    <p>Ville: Lille</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Luc Durand</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Finance</p>
+                    <p><i class="fas fa-city"></i> Ville: Lille</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Luc Durand')">Envoyer Bonjour</button>
@@ -139,10 +142,10 @@
             <div class="collaborateur">
                 <img src="../uploads/Fille2.jpg" alt="Isabelle Garcia" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Isabelle Garcia</p>
-                    <p>Service: Support</p>
-                    <p>Ville: Toulouse</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Isabelle Garcia</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Support</p>
+                    <p><i class="fas fa-city"></i> Ville: Toulouse</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Isabelle Garcia')">Envoyer Bonjour</button>
@@ -151,10 +154,10 @@
             <div class="collaborateur">
                 <img src="../uploads/fill1 (1).jpg" alt="Thomas Dubois" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Thomas Dubois</p>
-                    <p>Service: Logistique</p>
-                    <p>Ville: Nantes</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Thomas Dubois</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Logistique</p>
+                    <p><i class="fas fa-city"></i> Ville: Nantes</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Thomas Dubois')">Envoyer Bonjour</button>
@@ -163,10 +166,10 @@
             <div class="collaborateur">
                 <img src="../uploads/gars1.jpg" alt="Claire Bernard" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Claire Bernard</p>
-                    <p>Service: Achats</p>
-                    <p>Ville: Strasbourg</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Claire Bernard</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Achats</p>
+                    <p><i class="fas fa-city"></i> Ville: Strasbourg</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Claire Bernard')">Envoyer Bonjour</button>
@@ -175,10 +178,10 @@
             <div class="collaborateur">
                 <img src="../uploads/gars3.jpg" alt="Sophie Martin" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Sophie Martin</p>
-                    <p>Service: Marketing</p>
-                    <p>Ville: Bordeaux</p>
-                    <p>Pays: France</p>
+                    <p><i class="fas fa-user"></i> Nom: Sophie Martin</p>
+                    <p><i class="fas fa-briefcase"></i> Service: Marketing</p>
+                    <p><i class="fas fa-city"></i> Ville: Bordeaux</p>
+                    <p><i class="fas fa-flag"></i> Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
                     <button class="send-button" onclick="envoyerBonjour('Sophie Martin')">Envoyer Bonjour</button>
@@ -204,7 +207,8 @@
         </div>
     </footer>
 
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
+
 </html>

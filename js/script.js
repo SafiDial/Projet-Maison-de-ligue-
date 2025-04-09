@@ -1,3 +1,14 @@
+ // Gestion du menu burger
+     const burger = document.querySelector('.burger');
+     const navLinks = document.querySelector('.nav-links');
+
+     burger.addEventListener('click', () => {
+         navLinks.classList.toggle('active');
+         burger.classList.toggle('active');
+     });
+
+ // Gestion du filtre
+
 function filterCollaborateurs() {
     const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
     const serviceFilter = document.getElementById('serviceFilter').value;
