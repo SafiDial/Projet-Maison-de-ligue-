@@ -451,8 +451,21 @@ header {
   }
 }
 
+/*=========================== STYLE BOUTONS PAGE BJR ===========================*/
 
+.send-button {
+    background-color: #6C5CE7;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+.send-button:hover {
+    background-color: #000000;
+}
 
 
 

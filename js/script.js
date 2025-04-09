@@ -1,22 +1,25 @@
 function filterCollaborateurs() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
     const serviceFilter = document.getElementById('serviceFilter').value;
     const villeFilter = document.getElementById('villeFilter').value;
     const collaborateurs = document.querySelectorAll('.collaborateur');
 
     collaborateurs.forEach(collaborateur => {
-        const name = collaborateur.querySelector('.collaborateur-info p:nth-child(1)').textContent.toLowerCase();
-        const service = collaborateur.querySelector('.collaborateur-info p:nth-child(2)').textContent.split(': ')[1];
-        const ville = collaborateur.querySelector('.collaborateur-info p:nth-child(3)').textContent.split(': ')[1];
+        const infos = collaborateur.querySelectorAll('.collaborateur-info p');
+        const nom = infos[0].textContent.toLowerCase();
+        const service = infos[1].textContent.split(': ')[1];
+        const ville = infos[2].textContent.split(': ')[1];
 
-        const nameMatch = name.includes(searchInput);
-        const serviceMatch = serviceFilter === '' || service === serviceFilter;
-        const villeMatch = villeFilter === '' || ville === villeFilter;
+        const matchNom = nom.includes(searchInput);
+        const matchService = serviceFilter === '' || service === serviceFilter;
+        const matchVille = villeFilter === '' || ville === villeFilter;
 
-        if (nameMatch && serviceMatch && villeMatch) {
-            collaborateur.style.display = 'block';
-        } else {
-            collaborateur.style.display = 'none';
-        }
+        collaborateur.style.display = (matchNom && matchService && matchVille) ? '' : 'none';
     });
+}
+
+
+
+function envoyerBonjour(nom) {
+    alert('Bonjour ' + nom + ' !');
 }

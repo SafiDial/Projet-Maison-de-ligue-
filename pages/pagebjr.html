@@ -6,10 +6,6 @@
     <title>Collaborateurs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/colaborateur.css">
-    <style>
-        
-       
-    </style>
 </head>
 <body>
     <header>
@@ -20,7 +16,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="../pages/acceuil.html">Accueil</a></li>
-                    <li><a href="pagebjr.html">Collaborateurs</a></li>
+                    <li><a href="#collaborateurs">Collaborateurs</a></li>
                     <li><a href="#profil">Profil</a></li>
                 </ul>
             </nav>
@@ -35,7 +31,6 @@
             </div>
         </div>
     </header>
-
     <main class="collaborateurs-container">
         <h1>Tous les Collaborateurs</h1>
 
@@ -79,7 +74,6 @@
                 </div>
             </div>
         </div>
-        
 
         <div class="collaborateurs-grid" id="collaborateursGrid">
             <div class="collaborateur">
@@ -91,8 +85,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Jean Dupont')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -104,8 +97,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Marie Curie')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -117,8 +109,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Pierre Paul')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -130,8 +121,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Sophie Martin')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -143,8 +133,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Luc Durand')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -156,8 +145,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Isabelle Garcia')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -169,8 +157,7 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Thomas Dubois')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
@@ -182,46 +169,42 @@
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Claire Bernard')">Envoyer Bonjour</button>
                 </div>
             </div>
             <div class="collaborateur">
-                <img src="../uploads/gars1.jpg" alt="Antoine Leroy" class="collaborateur-image">
+                <img src="../uploads/gars3.jpg" alt="Sophie Martin" class="collaborateur-image">
                 <div class="collaborateur-info">
-                    <p>Nom: Antoine Leroy</p>
-                    <p>Service: Qualité</p>
-                    <p>Ville: Nice</p>
+                    <p>Nom: Sophie Martin</p>
+                    <p>Service: Marketing</p>
+                    <p>Ville: Bordeaux</p>
                     <p>Pays: France</p>
                 </div>
                 <div class="collaborateur-actions">
-                    <button class="edit-button">Éditer</button>
-                    <button class="delete-button">Supprimer</button>
+                    <button class="send-button" onclick="envoyerBonjour('Sophie Martin')">Envoyer Bonjour</button>
                 </div>
             </div>
         </div>
     </main>
 
-  
- <!--********************* FOOTER ******************** -->
+    <footer class="custom-footer">
+        <div class="footer-contact">
+            <div class="contact-item">
+                <span>+33 7 67 11 60 24</span>
+            </div>
+            <div class="contact-item">
+                <span>ITIC PARIS 75020</span>
+            </div>
+            <div class="contact-item">
+                <span>diallosafia75@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-final">
+            <p>&copy; Safiatou DIALLO. Tous droits réservés.</p>
+        </div>
+    </footer>
 
- <footer class="custom-footer">
-    <div class="footer-contact">
-        <div class="contact-item">
-            <span>+33 7 67 11 60 24</span>
-        </div>
-        <div class="contact-item">
-            <span>ITIC PARIS 75020</span>
-        </div>
-        <div class="contact-item">
-            <span>diallosafia75@gmail.com</span>
-        </div>
-    </div>
-    <div class="footer-final">
-        <p>&copy; Safiatou DIALLO. Tous droits réservés.</p>
-    </div>
-</footer>
+<script src="../js/script.js"></script>
 
-    <script src="../js/script.js"></script>
 </body>
 </html>
