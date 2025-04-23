@@ -32,9 +32,7 @@ Plateforme intranet permettant aux collaborateurs d'une entreprise de se connect
 - Attribution du rôle administrateur
 - Accès à un formulaire dédié pour la gestion des utilisateurs
 
-## Installation
-
-1. **Cloner le dépôt**:
-   ```bash
-   git clone [URL_du_dépôt]
-   cd nom_du_projet
+## Installer les dépendances
+ ```bash
+composer install
+npm install
