@@ -1,0 +1,119 @@
+@import 'header-footer.css';
+
+/*-------------------------- STYLE_FORMULAIRE -------------------------- */
+.page-connexion {
+  --primary-color: #6C5CE7;
+  --secondary-color: #FF7675;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-color: #5a4fcf;
+
+  width: 100%;
+  max-width: 22.5rem;
+  padding: 8% 0;
+  margin: auto;
+  text-align: center;
+  background: var(--background-color);
+}
+
+.titre {
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.titre::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+.titre:hover {
+  color: var(--hover-color);
+}
+
+.formulaire {
+  background: var(--background-color);
+  padding: 2.8125rem;
+  box-shadow: 0 0 1.25rem var(--box-shadow-color);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.formulaire input, .formulaire button {
+  width: 100%;
+  padding: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulaire button {
+  background: var(--primary-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+.formulaire button:hover {
+  background: var(--hover-color);
+}
+
+.formulaire input:hover, .formulaire button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .page-connexion {
+      padding: 15% 0;
+      max-width: 20rem;
+  }
+
+  .titre {
+      font-size: 2.5rem;
+      margin: 1rem auto;
+  }
+
+  .formulaire {
+      padding: 2rem;
+  }
+
+  .formulaire input, .formulaire button {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-connexion {
+      padding: 20% 0;
+      max-width: 18rem;
+  }
+
+  .titre {
+      font-size: 2rem;
+      margin: 1rem auto;
+  }
+
+  .formulaire {
+      padding: 1.5rem;
+  }
+
+  .formulaire input, .formulaire button {
+      font-size: 1.125rem;
+  }
+}
+

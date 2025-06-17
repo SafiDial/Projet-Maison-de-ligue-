@@ -1,0 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+<h1>Tableau de bord administrateur</h1>
+<a href="{{ route('admin.addCollaborateur') }}">Ajouter un collaborateur</a>
+<!-- Ajoutez d'autres liens ou actions administratives ici -->
+@endsection
