@@ -20,14 +20,13 @@
     @endif
 
 
-    <div class="filter-section">
+    <div class="filter-section admin-aligned-filters"> 
         <input type="text" id="filterName" placeholder="Filtrer par nom" class="filter-input">
         <input type="text" id="filterService" placeholder="Filtrer par service" class="filter-input">
         <input type="text" id="filterCountry" placeholder="Filtrer par pays" class="filter-input">
         
         <a href="{{ route('collaborateurs.create') }}" class="add-button" title="Ajouter un collaborateur">
-            <i class="fas fa-plus"></i> <!-- Icône Font Awesome -->
-        </a>
+            <i class="fas fa-plus"></i> </a>
     </div>
     
 
@@ -38,10 +37,7 @@
         {{--************* Parcours de la liste des collaborateurs ************--}}
      @foreach($collaborateurs as $collaborateur)
             <div class="collaborateur">
-
-                {{-- ************ Affichage de la photo du collaborateur ou d'une image par défaut **********--}}
-                <img
-                    src="{{ $collaborateur->photo && file_exists(storage_path('app/public/' . $collaborateur->photo))
+                <img src="{{ file_exists(public_path('storage/' . $collaborateur->photo))
                         ? asset('storage/' . $collaborateur->photo)
                         : asset('images/default.webp') }}"
                     alt="{{ $collaborateur->name }}"

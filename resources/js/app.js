@@ -1,4 +1,4 @@
-//********************* Menu burgerb **********************/
+//********************* Menu burger **********************/
 
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('nav-links');
@@ -9,9 +9,9 @@ burger.addEventListener('click', () => {
 });
 
 
-//*********************  Fonction pour filtrer les collaborateurs **********************/
+//********************* FITRE **********************/
 
-
+/*
 document.addEventListener('DOMContentLoaded', function () {
     const filterName = document.getElementById('filterName');
     const filterService = document.getElementById('filterService');
@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const collaborateursGrid = document.getElementById('collaborateursGrid');
     const collaborateurs = Array.from(collaborateursGrid.getElementsByClassName('collaborateur'));
 
-    //***** Fonction pour filtrer les collaborateurs
+    //***** Fonction pour filtrer les collaborateurs (minuscule)
     function filterCollaborators() {
         const nameValue = filterName.value.toLowerCase();
         const serviceValue = filterService.value.toLowerCase();
         const countryValue = filterCountry.value.toLowerCase();
 
-         //***** Vérifie si tous les filtres sont vides
+         //***** Pour Vérifier si tous les filtres sont vides
         const allFiltersEmpty = !nameValue && !serviceValue && !countryValue;
 
         collaborateurs.forEach(collaborateur => {
@@ -46,22 +46,4 @@ document.addEventListener('DOMContentLoaded', function () {
     filterService.addEventListener('input', filterCollaborators);
     filterCountry.addEventListener('input', filterCollaborators);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/

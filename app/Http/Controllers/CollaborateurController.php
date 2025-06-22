@@ -126,7 +126,6 @@ class CollaborateurController extends Controller
         return view('collaborateurs.edit', compact('collaborateur'));
     }
 
-    // Mettre à jour un collaborateur
   // Mettre à jour un collaborateur
 public function update(UpdateCollaborateurRequest $request, $id)
 {

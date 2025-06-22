@@ -3,8 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule; // Ajout de l'import de Rule
-
+use Illuminate\Validation\Rule; 
 class UpdateCollaborateurRequest extends FormRequest
 {
     public function authorize()

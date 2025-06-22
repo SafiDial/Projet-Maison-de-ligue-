@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     @vite('resources/css/connexion.css')
-    @vite(['resources/js/app.js'])
 
 </head>
 <body>

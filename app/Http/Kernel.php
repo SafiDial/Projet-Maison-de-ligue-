@@ -1,81 +1,64 @@
 <?php
 
-namespace App\Http;
+ /** ttes_les requêtes que reçoit_l' application . */
+namespace App\Http; 
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Kernel as HttpKernel; 
 
-class Kernel extends HttpKernel
+class Kernel extends HttpKernel 
 {
     /**
-     * The application's global HTTP middleware stack.
+     * Stack global de middlewares HTTP de l'application.
      *
-     * These middleware are run during every request to your application.
-     *
-     * @var array<int, class-string|string>
+     * Ces middlewares s'exécutent pour CHAQUE requête entrante.
+     * Ils gèrent les aspects fondamentaux de toutes les requêtes.
      */
     protected $middleware = [
-        // \App\Http\Middleware\TrustHosts::class,
-        \App\Http\Middleware\TrustProxies::class,
-        \Illuminate\Http\Middleware\HandleCors::class,
-        \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
-        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \App\Http\Middleware\TrimStrings::class,
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \App\Http\Middleware\TrustProxies::class, // Gère la confiance envers les serveurs proxy.
+        \Illuminate\Http\Middleware\HandleCors::class, // Gère les requêtes cross-origin (CORS).
+        \App\Http\Middleware\PreventRequestsDuringMaintenance::class, // Bloque les requêtes si l'application est en mode maintenance.
+        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class, // Vérifie la taille des données POST.
+        \App\Http\Middleware\TrimStrings::class, // Nettoie les chaînes de caractères (supprime les espaces superflus).
+        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class, // Convertit les chaînes vides en NULL.
     ];
 
     /**
-     * The application's route middleware groups.
+     * Groupes de middlewares de routes de l'application.
      *
-     * @var array<string, array<int, class-string|string>>
+     * Ces groupes permettent d'appliquer un ensemble de middlewares à des catégories spécifiques de routes (web, API).
      */
     protected $middlewareGroups = [
         'web' => [
-            \App\Http\Middleware\EncryptCookies::class,
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class,
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \App\Http\Middleware\VerifyCsrfToken::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            
-            \App\Http\Middleware\PreventBackHistory::class,
+            \App\Http\Middleware\EncryptCookies::class, // Chiffre les cookies.
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class, // Ajoute les cookies à la réponse.
+            \Illuminate\Session\Middleware\StartSession::class, // Démarre et gère la session utilisateur.
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class, // Partage les erreurs de validation avec les vues.
+            \App\Http\Middleware\VerifyCsrfToken::class, // Protection CSRF pour les formulaires.
+            \Illuminate\Routing\Middleware\SubstituteBindings::class, // Résout automatiquement les dépendances de routes (ex: {user} devient un objet User).
+            \App\Http\Middleware\PreventBackHistory::class, // Empêche le retour en arrière dans l'historique du navigateur (si personnalisé).
         ],
-
-
-        
         'api' => [
-            // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api', // Limite le nombre de requêtes pour les API.
+            \Illuminate\Routing\Middleware\SubstituteBindings::class, // Résout les dépendances de routes pour les API.
         ],
     ];
 
     /**
-     * The application's middleware aliases.
+     * Alias des middlewares.
      *
-     * Aliases may be used instead of class names to conveniently assign middleware to routes and groups.
-     *
-     * @var array<string, class-string|string>
+     * Ces alias permettent d'assigner facilement des middlewares aux routes en utilisant un nom court.
      */
     protected $middlewareAliases = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
-        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class,
-        'precognitive' => \Illuminate\Foundation\Http\Middleware\HandlePrecognitiveRequests::class,
-        'signed' => \App\Http\Middleware\ValidateSignature::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'auth' => \App\Http\Middleware\Authenticate::class, // Middleware d'authentification.
+        'can' => \Illuminate\Auth\Middleware\Authorize::class, // Vérification des permissions (Gates/Policies).
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class, // Redirige si l'utilisateur est déjà authentifié.
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class, // Alias pour la limitation des requêtes.
     ];
 
+    /**
+     * Middlewares spécifiques aux routes (souvent pour les middlewares personnalisés).
+     */
     protected $routeMiddleware = [
-        // ...
-        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'admin' => \App\Http\Middleware\AdminMiddleware::class, // Votre middleware personnalisé pour vérifier le rôle d'administrateur.
     ];
-
-    
-
-    
 }

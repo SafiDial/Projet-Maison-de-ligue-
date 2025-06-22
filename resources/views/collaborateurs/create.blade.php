@@ -27,7 +27,7 @@
             </div>
         </section>
 
-        <!--******************* Formulaire pour ajouter un collaborateur ********************-->
+        <!--******************* Formulaire pour ajouter un collaborateur avec pp********************-->
 
         <form action="{{ route('collaborateurs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
