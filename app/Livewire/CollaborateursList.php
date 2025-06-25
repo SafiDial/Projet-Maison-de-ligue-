@@ -53,9 +53,7 @@ class CollaborateursList extends Component
 
         return view('livewire.collaborateurs-list', [
             'collaborateurs' => $collaborateurs,
-            // 'services' => Collaborateur::distinct()->pluck('service'), // Plus nécessaire si c'est un champ texte libre
-            // 'cities' => Collaborateur::distinct()->pluck('city'),     // Suppression
-            // 'countries' => Collaborateur::distinct()->pluck('country') // Plus nécessaire si c'est un champ texte libre
+            
         ]);
     }
 }

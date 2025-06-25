@@ -27,9 +27,8 @@
 
     @livewire('collaborateurs-list')
 
-    {{-- Pas de bouton d'ajout ici pour les utilisateurs standards --}}
 
 </div>
 @endsection
 
-{{-- @vite(['resources/js/app.js']) --}}
+ @vite(['resources/js/app.js']) 
