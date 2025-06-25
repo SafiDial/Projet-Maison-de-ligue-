@@ -18,11 +18,14 @@
 
     @if(session('error'))
         <p style="color: red">{{ session('error') }}</p>
+    @endif 
+
     <div class="filter-section admin-aligned-filters"> 
         <a href="{{ route('collaborateurs.create') }}" class="add-button" title="Ajouter un collaborateur">
             <i class="fas fa-plus"></i> 
         </a>
     </div>
+    
     <livewire:collaborateurs-list />
 
 </div>
